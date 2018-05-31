@@ -1,2 +1,0 @@
-# MPP
-Created with CodeSandbox
