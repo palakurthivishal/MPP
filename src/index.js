@@ -13,7 +13,8 @@ const profileData = {
     interests: ""
   },
   professional: {
-    shortIntro: "",
+    shortIntro:
+      "I'm an experienced Front-end Engineer with a demonstrated history of working in the computer software industry. Skilled in Agile Methodologies, User Interface development using HTML5, CSS3, Javascript, jQuery, Angular JS, React JS and along with familiarity of Node Js, Express Js and Mongo DB.",
     currentRole: {
       organization: "Development Bank of Singapore",
       designation: "Development Engineer",
@@ -49,6 +50,7 @@ const App = () => {
           <Summary
             name={profileData.name}
             currentRole={profileData.professional.currentRole}
+            shortIntro={profileData.professional.shortIntro}
           />
         </div>
         <div className="col-12 col-md-4" />
