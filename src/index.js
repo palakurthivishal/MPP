@@ -1,12 +1,60 @@
 import React from "react";
 import { render } from "react-dom";
 
-const styles = {};
+import Cover from "./cover";
+import Summary from "./summary";
 
-const App = () => (
-  <div style={styles}>
-    <h1>Hello World</h1>
-  </div>
-);
+const profileData = {
+  name: "Vishal Goud Palakurthi",
+  avatarImg:
+    "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909__340.png",
+  personal: {
+    hobbies: "",
+    interests: ""
+  },
+  professional: {
+    shortIntro: "",
+    currentRole: {
+      organization: "Development Bank of Singapore",
+      designation: "Development Engineer",
+      location: "Hyderabad, Telangana, India"
+    },
+    companiesWorkedFor: [
+      {
+        name: "Development Bank of Singapore",
+        designation: "Development Engineer"
+      },
+      {
+        name: "Innominds Software SEZ India Private Limited",
+        designation: "Senior Software Engineer"
+      }
+    ],
+    projects: [],
+    technologies: [
+      {
+        name: "Java",
+        experience: "1 year",
+        howGoodAmI: ""
+      }
+    ]
+  }
+};
+
+const App = () => {
+  return (
+    <div className="">
+      <div className="row">
+        <div className="col-12 col-md-8">
+          <Cover imgPath={profileData.avatarImg} />
+          <Summary
+            name={profileData.name}
+            currentRole={profileData.professional.currentRole}
+          />
+        </div>
+        <div className="col-12 col-md-4" />
+      </div>
+    </div>
+  );
+};
 
 render(<App />, document.getElementById("root"));
