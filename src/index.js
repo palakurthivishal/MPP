@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import Cover from "./cover";
 import Summary from "./summary";
 import TechBox from "./techbox";
+import ConnectWithMe from "./connectWithMe";
 
 const profileData = {
   name: "Vishal Goud Palakurthi",
@@ -13,6 +14,25 @@ const profileData = {
     hobbies: "",
     interests: ""
   },
+  social: [
+    {
+      name: "facebook logo",
+      link: "",
+      logo: "http://simpleicon.com/wp-content/uploads/facebook-2-256x256.png"
+    },
+    {
+      name: "linkedin logo",
+      link: "",
+      logo:
+        "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png"
+    },
+    {
+      name: "twitter logo",
+      link: "",
+      logo:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEgQDEo27xvN8STY3jZ3zkCKJ3opVDoI4fHO9e-8nB6OrA9G6"
+    }
+  ],
   professional: {
     shortIntro:
       "I'm an experienced Front-end Engineer with a demonstrated history of working in the computer software industry. Skilled in Agile Methodologies, User Interface development using HTML5, CSS3, Javascript, jQuery, Angular JS, React JS and along with familiarity of Node Js, Express Js and Mongo DB.",
@@ -117,6 +137,7 @@ const App = () => {
           />
         </div>
         <div className="col-12 col-md-4">
+          <ConnectWithMe data={profileData.social} />
           <TechBox data={profileData.professional.technologies} />
         </div>
       </div>

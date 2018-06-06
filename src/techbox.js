@@ -7,7 +7,7 @@ const wrapperStyles = {
   // maxHeight: "200px",
   overflow: "auto",
   background: "#EDEDED",
-  padding: "0 10px",
+  padding: "10px",
   position: "relative"
 };
 
@@ -22,6 +22,7 @@ export default class TechBox extends React.Component {
     this.animateState = "play";
     this.highlightTech = this.highlightTech.bind(this);
     this.selectTechBlockOnHover = this.selectTechBlockOnHover.bind(this);
+    this.toggleAnimation = this.toggleAnimation.bind(this);
   }
 
   highlightTech(temp) {
@@ -40,21 +41,23 @@ export default class TechBox extends React.Component {
           popupText: this.props.data[temp].experience
         }
       });
-    } else {
-      clearInterval(this.timer);
     }
   }
   componentDidMount() {
     this.highlightTech(0);
+    this.startAnimation();
+  }
+  toggleAnimation(state) {
+    this.animateState = state;
+  }
+  startAnimation() {
     this.timer = setInterval(() => {
       if (this.animateState !== "pause")
         this.highlightTech(this.state.count + 1);
     }, this.timerInterval);
   }
   selectTechBlockOnHover(index) {
-    this.setState({
-      count: index
-    });
+    this.highlightTech(index);
   }
   render() {
     const containerStyles = {
@@ -63,7 +66,17 @@ export default class TechBox extends React.Component {
       justifyContent: "center"
     };
     return (
-      <div ref="containerRef" style={wrapperStyles} className="text-center">
+      <div
+        ref="containerRef"
+        onMouseOver={() => {
+          this.toggleAnimation("pause");
+        }}
+        onMouseLeave={() => {
+          this.toggleAnimation("play");
+        }}
+        style={wrapperStyles}
+        className="text-center"
+      >
         <div style={containerStyles}>
           {this.props.data.map((d, i) => (
             <TechBlock

@@ -47,7 +47,7 @@ class HighlightTechBlock extends React.Component {
       position: "absolute",
       top: top + "px",
       left: left + "px",
-      transition: "all 1s",
+      transition: "all 0.5s",
       zIndex: "1"
     };
     return (
@@ -57,7 +57,7 @@ class HighlightTechBlock extends React.Component {
           data-boundary="window"
           data-animation="true"
           data-placement="bottom"
-          data-offset="10 10"
+          data-offset="2 2"
           style={{
             height: "100%",
             width: "80%",
