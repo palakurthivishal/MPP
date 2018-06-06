@@ -1,8 +1,8 @@
 import React from "react";
 
 const wrapperStyles = {
-  display: "inline-block",
-  padding: "10px"
+  padding: "10px",
+  zIndex: "2"
 };
 
 const imgStyles = {
@@ -10,10 +10,16 @@ const imgStyles = {
   width: "50px"
 };
 
-export default ({ data }) => {
-  return (
-    <span style={wrapperStyles}>
-      <img style={imgStyles} src={data.img} alt={data.name} />
-    </span>
-  );
-};
+export default class TechBlock extends React.Component {
+  render() {
+    return (
+      <div style={wrapperStyles}>
+        <img
+          style={imgStyles}
+          src={this.props.data.img}
+          alt={this.props.data.name}
+        />
+      </div>
+    );
+  }
+}
