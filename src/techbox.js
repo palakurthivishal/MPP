@@ -14,12 +14,14 @@ const wrapperStyles = {
 export default class TechBox extends React.Component {
   constructor() {
     super();
-    this.timerInterval = 3000;
+    this.timerInterval = 5000;
     this.state = {
       count: 0,
       highlightConfig: {}
     };
+    this.animateState = "play";
     this.highlightTech = this.highlightTech.bind(this);
+    this.selectTechBlockOnHover = this.selectTechBlockOnHover.bind(this);
   }
 
   highlightTech(temp) {
@@ -49,7 +51,11 @@ export default class TechBox extends React.Component {
         this.highlightTech(this.state.count + 1);
     }, this.timerInterval);
   }
-  startAnimation() {}
+  selectTechBlockOnHover(index) {
+    this.setState({
+      count: index
+    });
+  }
   render() {
     const containerStyles = {
       display: "flex",
@@ -57,10 +63,16 @@ export default class TechBox extends React.Component {
       justifyContent: "center"
     };
     return (
-      <div ref="containerRef" style={wrapperStyles} class="text-center">
+      <div ref="containerRef" style={wrapperStyles} className="text-center">
         <div style={containerStyles}>
           {this.props.data.map((d, i) => (
-            <TechBlock key={i} ref={`tech_${i}`} data={d} />
+            <TechBlock
+              activeTechBlock={this.selectTechBlockOnHover}
+              key={i}
+              index={i}
+              ref={`tech_${i}`}
+              data={d}
+            />
           ))}
         </div>
         <HighlightTechBlock config={this.state.highlightConfig} />

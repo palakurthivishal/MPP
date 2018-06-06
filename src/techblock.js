@@ -13,7 +13,12 @@ const imgStyles = {
 export default class TechBlock extends React.Component {
   render() {
     return (
-      <div style={wrapperStyles}>
+      <div
+        onMouseOver={() => {
+          this.props.activeTechBlock(this.props.index);
+        }}
+        style={wrapperStyles}
+      >
         <img
           style={imgStyles}
           src={this.props.data.img}
