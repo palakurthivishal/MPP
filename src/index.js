@@ -18,19 +18,17 @@ const profileData = {
     {
       name: "facebook logo",
       link: "",
-      logo: "http://simpleicon.com/wp-content/uploads/facebook-2-256x256.png"
+      iconClass: "fa fa-facebook"
     },
     {
       name: "linkedin logo",
       link: "",
-      logo:
-        "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png"
+      iconClass: "fa fa-linkedin"
     },
     {
       name: "twitter logo",
       link: "",
-      logo:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEgQDEo27xvN8STY3jZ3zkCKJ3opVDoI4fHO9e-8nB6OrA9G6"
+      iconClass: "fa fa-twitter"
     }
   ],
   professional: {
