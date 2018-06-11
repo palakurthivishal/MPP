@@ -8,10 +8,15 @@ const coverStyles = {
 
 export default ({ data }) => {
   return (
-    <div style={coverStyles}>
-      {data.map((d, i) => {
-        return <SocialIcon config={d} key={i} />;
-      })}
+    <div className="card bg-secondary text-white flat">
+      <div className="card-body">
+        <h5>Want to connect with me?</h5>
+        <div style={coverStyles}>
+          {data.map((d, i) => {
+            return <SocialIcon config={d} key={i} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 };

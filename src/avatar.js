@@ -1,8 +1,7 @@
 import React from "react";
 
 const avatarStyles = {
-  height: "100px",
-  borderRadius: "50%"
+  height: "100px"
 };
 
 const wrapperStyles = {
@@ -13,7 +12,12 @@ const wrapperStyles = {
 export default ({ imgPath }) => {
   return (
     <div style={wrapperStyles} className="text-center">
-      <img src={imgPath} style={avatarStyles} alt="cover-pic" />
+      <img
+        className="rounded-circle"
+        src={imgPath}
+        style={avatarStyles}
+        alt="cover-pic"
+      />
     </div>
   );
 };

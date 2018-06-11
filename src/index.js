@@ -18,17 +18,17 @@ const profileData = {
     {
       name: "facebook logo",
       link: "",
-      iconClass: "fa fa-facebook"
+      iconClass: "fab fa-facebook"
     },
     {
       name: "linkedin logo",
       link: "",
-      iconClass: "fa fa-linkedin"
+      iconClass: "fab fa-linkedin"
     },
     {
       name: "twitter logo",
       link: "",
-      iconClass: "fa fa-twitter"
+      iconClass: "fab fa-twitter"
     }
   ],
   professional: {
@@ -135,8 +135,8 @@ const App = () => {
           />
         </div>
         <div className="col-12 col-md-4">
-          <ConnectWithMe data={profileData.social} />
           <TechBox data={profileData.professional.technologies} />
+          <ConnectWithMe className="mTop-10" data={profileData.social} />
         </div>
       </div>
     </div>

@@ -7,3 +7,12 @@ body {
   color: #1d354e;
   font-size: 12px;
 }
+.mTop-10 {
+  margin-top: 10px;
+}
+.mBot-10 {
+  margin-bottom: 10px;
+}
+.card.flat {
+  border-radius: 0;
+}

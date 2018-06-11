@@ -7,7 +7,7 @@ class HighlightTechBlock extends React.Component {
   constructor() {
     super();
     this.popTemplate = `
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card text-white bg-primary" style="max-width: 18rem;">
         <div class="card-header">Header</div>
         <div class="card-body">
           <h5 class="card-title">Dark card title</h5>
@@ -51,9 +51,9 @@ class HighlightTechBlock extends React.Component {
       zIndex: "1"
     };
     return (
-      <div style={compStyles} id="pop-wrap" tabindex="0">
+      <div style={compStyles} id="pop-wrap" tabIndex="0">
         <button
-          tabindex="1"
+          tabIndex="1"
           data-boundary="window"
           data-animation="true"
           data-placement="bottom"
