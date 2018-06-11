@@ -6,7 +6,6 @@ import HighlightTechBlock from "./highlightTechBlock";
 const wrapperStyles = {
   // maxHeight: "200px",
   overflow: "auto",
-  background: "#EDEDED",
   padding: "10px",
   position: "relative"
 };
@@ -75,8 +74,9 @@ export default class TechBox extends React.Component {
           this.toggleAnimation("play");
         }}
         style={wrapperStyles}
-        className="text-center"
+        className="text-center col-12"
       >
+        <h3>My Tech Box</h3>
         <div style={containerStyles}>
           {this.props.data.map((d, i) => (
             <TechBlock

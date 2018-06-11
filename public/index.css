@@ -3,16 +3,28 @@ body {
   font-family: Roboto, "sans-serif";
   min-height: 100%;
   height: 100%;
-  background: #f0f0f0;
+  width: 100%;
   color: #1d354e;
   font-size: 12px;
 }
 .mTop-10 {
   margin-top: 10px;
 }
+.mTop-20 {
+  margin-top: 20px;
+}
 .mBot-10 {
   margin-bottom: 10px;
+}
+.mBot-20 {
+  margin-bottom: 20px;
 }
 .card.flat {
   border-radius: 0;
 }
+
+/* @media (max-width: 768px) {
+  .main-container {
+    padding: 0;
+  }
+} */

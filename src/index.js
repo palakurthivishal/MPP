@@ -5,6 +5,7 @@ import Cover from "./cover";
 import Summary from "./summary";
 import TechBox from "./techbox";
 import ConnectWithMe from "./connectWithMe";
+import CompaniesWorkedFor from "./companiesWorkedFor";
 
 const profileData = {
   name: "Vishal Goud Palakurthi",
@@ -42,11 +43,13 @@ const profileData = {
     companiesWorkedFor: [
       {
         name: "Development Bank of Singapore",
-        designation: "Development Engineer"
+        designation: "Development Engineer",
+        logo: "https://www.drwealth.com/wp-content/uploads/DBS-logo.png"
       },
       {
         name: "Innominds Software SEZ India Private Limited",
-        designation: "Senior Software Engineer"
+        designation: "Senior Software Engineer",
+        logo: "http://acelinetech.com/images/clients/17.png"
       }
     ],
     projects: [],
@@ -124,7 +127,7 @@ const profileData = {
 
 const App = () => {
   return (
-    <div className="">
+    <div className="container main-container">
       <div className="row">
         <div className="col-12 col-md-8">
           <Cover imgPath={profileData.avatarImg} />
@@ -132,6 +135,9 @@ const App = () => {
             name={profileData.name}
             currentRole={profileData.professional.currentRole}
             shortIntro={profileData.professional.shortIntro}
+          />
+          <CompaniesWorkedFor
+            data={profileData.professional.companiesWorkedFor}
           />
         </div>
         <div className="col-12 col-md-4">
