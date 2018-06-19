@@ -3,7 +3,7 @@ import React from "react";
 const wrapperStyles = {};
 
 const projectHeaderStyles = {
-  background: "#c9d6e4"
+  background: "#cca76f40"
 };
 const projectTitleStyles = {
   color: "#2e4249",

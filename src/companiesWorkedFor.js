@@ -49,7 +49,7 @@ export default class CompaniesWorkedFor extends React.Component {
   render() {
     return (
       <div style={wrapperStyles} className="col-12 mTop-20">
-        <h3 className="text-center">My Employers</h3>
+        <h3 className="text-center">Employers</h3>
         <div className="row">
           {this.props.data &&
             this.props.data.map(c => {

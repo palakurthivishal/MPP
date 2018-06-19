@@ -76,7 +76,7 @@ export default class TechBox extends React.Component {
         style={wrapperStyles}
         className="text-center col-12"
       >
-        <h3>My Tech Box</h3>
+        <h3>Tech Box</h3>
         <div style={containerStyles}>
           {this.props.data.map((d, i) => (
             <TechBlock
