@@ -133,33 +133,30 @@ const App = () => {
       <Particles
         params={{
           particles: {
+            number: {
+              value: 40,
+              density: {
+                enable: true,
+                value_area: 80
+              }
+            },
             line_linked: {
               shadow: {
                 enable: true,
-                color: "#363636",
+                color: "#000",
                 blur: 1
               }
             },
             move: {
-              enable: true,
-              speed: 4,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-              }
+              enable: false
             }
           }
         }}
         style={{
           width: "100%",
           position: "fixed",
-          background: "#EDEDED"
+          background: "#EDEDED",
+          opacity: 0.8
         }}
       />
       <div className="container main-container">

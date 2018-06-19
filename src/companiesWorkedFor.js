@@ -7,7 +7,7 @@ export default class CompaniesWorkedFor extends React.Component {
     const bgStyles = {
       background: `url(${c.logo})`,
       backgroundPosition: "center",
-      backgroundSize: "90% auto",
+      backgroundSize: "120px auto",
       backgroundRepeat: "no-repeat",
       height: "120px"
     };
