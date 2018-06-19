@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
 
+import Particles from "react-particles-js";
+
 import Cover from "./cover";
 import Summary from "./summary";
 import TechBox from "./techbox";
@@ -127,22 +129,56 @@ const profileData = {
 
 const App = () => {
   return (
-    <div className="container main-container">
-      <div className="row">
-        <div className="col-12 col-md-8">
-          <Cover imgPath={profileData.avatarImg} />
-          <Summary
-            name={profileData.name}
-            currentRole={profileData.professional.currentRole}
-            shortIntro={profileData.professional.shortIntro}
-          />
-          <CompaniesWorkedFor
-            data={profileData.professional.companiesWorkedFor}
-          />
-        </div>
-        <div className="col-12 col-md-4">
-          <TechBox data={profileData.professional.technologies} />
-          <ConnectWithMe className="mTop-10" data={profileData.social} />
+    <div>
+      <Particles
+        params={{
+          particles: {
+            line_linked: {
+              shadow: {
+                enable: true,
+                color: "#363636",
+                blur: 1
+              }
+            },
+            move: {
+              enable: true,
+              speed: 4,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+              }
+            }
+          }
+        }}
+        style={{
+          width: "100%",
+          position: "fixed",
+          background: "#EDEDED"
+        }}
+      />
+      <div className="container main-container">
+        <div className="row">
+          <div className="col-12 col-md-8">
+            <Cover imgPath={profileData.avatarImg} />
+            <Summary
+              name={profileData.name}
+              currentRole={profileData.professional.currentRole}
+              shortIntro={profileData.professional.shortIntro}
+            />
+            <CompaniesWorkedFor
+              data={profileData.professional.companiesWorkedFor}
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <TechBox data={profileData.professional.technologies} />
+            <ConnectWithMe className="mTop-10" data={profileData.social} />
+          </div>
         </div>
       </div>
     </div>
