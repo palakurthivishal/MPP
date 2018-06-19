@@ -2,6 +2,14 @@ import React from "react";
 
 const wrapperStyles = {};
 
+const projectHeaderStyles = {
+  background: "#c9d6e4"
+};
+const projectTitleStyles = {
+  color: "#2e4249",
+  fontSize: "16px"
+};
+
 class Projects extends React.Component {
   generateCardId(i) {
     return "card-" + i;
@@ -14,14 +22,15 @@ class Projects extends React.Component {
             this.props.data.map((d, i) => {
               return (
                 <div class="card">
-                  <div class="card-header" id="headingOne">
+                  <div class="card-header" style={projectHeaderStyles}>
                     <h5 class="mb-0">
                       <button
+                        style={projectTitleStyles}
                         class="btn btn-link"
                         data-toggle="collapse"
                         data-target={"#" + this.generateCardId(i)}
                         aria-expanded="true"
-                        aria-controls="collapseOne"
+                        aria-controls={"collapse-" + { i }}
                       >
                         {d.name}
                       </button>
@@ -30,7 +39,7 @@ class Projects extends React.Component {
 
                   <div
                     id={this.generateCardId(i)}
-                    class="collapse show"
+                    class={"collapse " + (i === 0 ? "show" : "")}
                     aria-labelledby="headingOne"
                     data-parent="#accordion"
                   >

@@ -41,7 +41,7 @@ class HighlightTechBlock extends React.Component {
   render() {
     const { left, top, width, height } = this.props.config;
     const compStyles = {
-      border: "1px solid gold",
+      border: "2px solid green",
       height: height + "px",
       width: width + "px",
       position: "absolute",

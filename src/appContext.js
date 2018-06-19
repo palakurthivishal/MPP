@@ -8,14 +8,19 @@ const profileData = {
   },
   social: [
     {
-      name: "facebook logo",
+      name: "github logo",
       link: "",
-      iconClass: "fab fa-facebook"
+      iconClass: "fab fa-github"
     },
     {
       name: "linkedin logo",
       link: "",
       iconClass: "fab fa-linkedin"
+    },
+    {
+      name: "facebook logo",
+      link: "",
+      iconClass: "fab fa-facebook"
     },
     {
       name: "twitter logo",
@@ -61,7 +66,7 @@ const profileData = {
         description: `Appcito delivers cloud-based services that make it fast and easy to keep cloud applications performant, secure, available, and always improving.Our cloud-native proxy-based service improves application delivery with a web-scale solution for load balancing, application security, continuous deployment and more. Innovative application teams rely on Appcito to make their applications hum, their users happy and their companies succeed.Appcito is headquartered in Santa Clara CA, operates an Research and Development facility in Bangalore, India and has global sales and solution delivery capabilities. Founded in 2013, we are a young and fast-growing company serving organizations of any size and in any industry that are embracing the cost and flexibility advantages from cloud computing.Appcito’s team has experience creating successful businesses, building cloud and infrastructure technologies, and running IT operations at web scale. Before joining Appcito our team created enterprise-class products and enabled world-class customer success at Citrix, F5, Barracuda Networks, Juniper Networks, Meru Networks Apigee and others.`
       },
       {
-        name: "Hospital Informaiton System - Napier HealthCare",
+        name: "Hospital Information System - Napier HealthCare",
         period: "Oct 2013 – Jun 2014",
         description: `The Napier HIS is a set of integrated web-based solutions tailored to the requirements of all grades and sizes of hospitals and health systems in the world, particularly in the US, Asia Pacific, the Middle East and Africa.The Napier Hospital Information System (HIS) is a flexible, affordable and intuitive software solution developed collaboratively with healthcare professionals–including physicians, nurses and pharmacists–and designed to empower them and their peers to make better decisions and enhance patient care and safety, while minimizing costs, resource expenditure and loss of revenue. It also enables healthcare providers to achieve requirements for an electronic health record (EHR), revenue cycle management system and more.Napier HIS is an integrated and scalable web-native platform that optimizes clinical, financial and operational outcomes. Its modular capability supports simple integration with additional clinical and ancillary solutions to support the continuum of care. Developed using healthcare industry standards, Napier HIS also allows seamless integration with third-party IT solutions.`
       }
@@ -141,7 +146,7 @@ const profileData = {
 export const particlesConfig = {
   particles: {
     number: {
-      value: 4,
+      value: 20,
       density: {
         enable: true,
         value_area: 80
@@ -150,7 +155,7 @@ export const particlesConfig = {
     line_linked: {
       shadow: {
         enable: true,
-        color: "#000",
+        color: "#851e3e",
         blur: 1
       }
     },
