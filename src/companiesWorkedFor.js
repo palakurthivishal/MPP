@@ -9,16 +9,37 @@ export default class CompaniesWorkedFor extends React.Component {
       backgroundPosition: "center",
       backgroundSize: "120px auto",
       backgroundRepeat: "no-repeat",
-      height: "120px"
+      height: "120px",
+      position: "relative"
+    };
+    const linkStyles = {
+      display: "inline",
+      position: "absolute",
+      right: "-5px",
+      top: "-5px",
+      fontSize: "16px",
+      borderRadius: "50%",
+      color: "#FFF"
     };
     return (
       <div className="col-12 col-sm-6">
         <div className="card mBot-10">
-          <div className="card-img-top" style={bgStyles} />
+          <div className="card-img-top" style={bgStyles}>
+            <a
+              target="_blank"
+              href={c.link}
+              style={linkStyles}
+              className="badge badge-secondary fas fa-link"
+            />
+          </div>
           <div className="card-body">
-            <p className="card-text">
-              Some quick ,example text to build on the card title and make up
-              the bulk of the card's content.
+            <p className="card-text text-center">
+              <span>
+                <h4>{c.designation}</h4>{" "}
+                <b>
+                  {c.from} - {c.to}
+                </b>{" "}
+              </span>
             </p>
           </div>
         </div>

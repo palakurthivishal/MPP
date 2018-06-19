@@ -7,6 +7,7 @@ import Cover from "./cover";
 import Summary from "./summary";
 import TechBox from "./techbox";
 import ConnectWithMe from "./connectWithMe";
+import Projects from "./projects";
 import CompaniesWorkedFor from "./companiesWorkedFor";
 
 const profileData = {
@@ -46,12 +47,18 @@ const profileData = {
       {
         name: "Development Bank of Singapore",
         designation: "Development Engineer",
-        logo: "https://www.drwealth.com/wp-content/uploads/DBS-logo.png"
+        logo: "https://www.drwealth.com/wp-content/uploads/DBS-logo.png",
+        from: "Aug 2017",
+        to: "Now",
+        link: "https://www.dbs.com.sg/"
       },
       {
         name: "Innominds Software SEZ India Private Limited",
         designation: "Senior Software Engineer",
-        logo: "http://acelinetech.com/images/clients/17.png"
+        logo: "http://acelinetech.com/images/clients/17.png",
+        from: "Nov 2012",
+        to: "Jul 2017",
+        link: "https://www.innominds.com/"
       }
     ],
     projects: [],
@@ -134,7 +141,7 @@ const App = () => {
         params={{
           particles: {
             number: {
-              value: 40,
+              value: 4,
               density: {
                 enable: true,
                 value_area: 80
@@ -168,6 +175,7 @@ const App = () => {
               currentRole={profileData.professional.currentRole}
               shortIntro={profileData.professional.shortIntro}
             />
+            <Projects />
             <CompaniesWorkedFor
               data={profileData.professional.companiesWorkedFor}
             />
